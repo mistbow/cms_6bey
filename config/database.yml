@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: cms_6bey_development
+  database: cms_6bey
   pool: 5
-  username: root
-  password:
+  username: simple_cms
+  password: secretps
   socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -27,8 +27,8 @@ test:
   reconnect: false
   database: cms_6bey_test
   pool: 5
-  username: root
-  password:
+  username: simple_cms
+  password: secretps
   socket: /var/lib/mysql/mysql.sock
 
 production:
@@ -37,6 +37,6 @@ production:
   reconnect: false
   database: cms_6bey_production
   pool: 5
-  username: root
-  password:
+  username: simple_cms
+  password: secretps
   socket: /var/lib/mysql/mysql.sock
