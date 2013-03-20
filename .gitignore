@@ -31,3 +31,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Ignore the database.yml
+/config/database.yml
