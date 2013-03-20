@@ -14,9 +14,8 @@ development:
   reconnect: false
   database: cms_6bey
   pool: 5
-  username: simple_cms
-  password: secretps
-  socket: /var/lib/mysql/mysql.sock
+  username: root
+  host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,18 +24,16 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: cms_6bey_test
+  database: cms_6bey
   pool: 5
-  username: simple_cms
-  password: secretps
-  socket: /var/lib/mysql/mysql.sock
+  username: root
+  host: 127.0.0.1
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: cms_6bey_production
+  database: cms_6bey
   pool: 5
-  username: simple_cms
-  password: secretps
-  socket: /var/lib/mysql/mysql.sock
+  username: root
+  host: 127.0.0.1
