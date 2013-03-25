@@ -1,0 +1,25 @@
+# in order to DRY,we can use common config 
+# common config
+ common: &common
+   adapter: mysql2
+   encoding: utf8
+   pool: 10
+   username: root
+   password: xxxxx
+   host: localhost
+   port: 3306
+ 
+# development config
+ development:
+   database: cms_6bey_development
+   <<: *common
+ 
+# test config
+ test:
+   database: cms_6bey_test
+   <<: *common
+   
+#production config    
+ production:
+   <<: *common
+   database: cms_6bey_production
