@@ -1,0 +1,57 @@
+
+<div class="center">
+  <%= form_for @user, :html => { :class => "form-horizontal" } do |f| %>
+   <fieldset>
+      <div id="legend">
+        <legend class="">注册</legend>
+      </div>
+      <div class="control-group">
+        <!-- 姓 -->
+        <label class="control-label"  for="firstname">姓</label>
+        <div class="controls">
+          <%= f.text_field :first_name, size: 25, :class=>"input-xlarge", :placeholder=>"" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- 名 -->
+        <label class="control-label"  for="lastname">名</label>
+        <div class="controls">
+          <%= f.text_field :last_name, size: 50, :class=>"input-xlarge", :placeholder=>"" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- 邮箱 -->
+        <label class="control-label" for="email">邮箱</label>
+        <div class="controls">
+          <%= f.text_field :email, :class=>"input-xlarge", :placeholder=>"" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">密码</label>
+        <div class="controls">
+          <%= f.password_field :password, size: 40, :class=>"input-xlarge", :placeholder=>"" %>
+        </div>
+      </div>
+ 
+      <div class="control-group">
+        <!-- password_confirmation -->
+        <label class="control-label"  for="password_confirmation">重复密码</label>
+        <div class="controls">
+          <%= f.password_field :password_confirmation, size: 40, :class=>"input-xlarge", :placeholder=>"" %>
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <%= f.button '注册',:class=>"btn btn-success" %>
+        </div>
+      </div>     
+    </fieldset>
+    <% end %>
+  </div>
