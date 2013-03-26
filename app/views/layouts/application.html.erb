@@ -19,6 +19,13 @@
 						<li><%= link_to "Link3" %></li>
 					</ul>
 					<ul class="nav pull-right">
+            <% if current_admin %>
+              Logged in as <%= current_admin.email %>.
+              <%= link_to "Log Out", tession_path("current"), method: "delete" %>
+            <% else %>
+              <%= link_to "Sign admin Up", new_admin_path %>
+              <%= link_to "Log admin In", new_tession_path %>
+            <% end %>
 						<li><%= link_to '注册',new_user_path %></li>
 						<li><%= link_to '登录',new_session_path %></li>
 						<%# 
