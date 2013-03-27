@@ -6,6 +6,22 @@
 
 本项目将致力于，通过社区协作，共同提高Ruby on Rails开发能力
 
+##How to deploy to Heroku
+
+```ruby
+gem 'pg'
+bundle --without production
+git add .
+git commit -m "changed"
+
+#while up to date
+git branch production
+git checkout production
+#do some code changes
+git commit -am "some desparate code changes to try fix heroku"
+git push heroku production:master
+```
+
 ##新手指南
 
 需要贡献开源代码的参照以下具体步骤：
