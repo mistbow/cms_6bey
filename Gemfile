@@ -1,4 +1,5 @@
-source 'http://ruby.taobao.org'
+#source 'http://ruby.taobao.org'
+source "http://rubygems.org"
 
 gem 'rails', '3.2.13'
 #FIXME looks like should only belongs to deploy and production
