@@ -14,8 +14,8 @@
 ```ruby
     cd cms_6bey #进入项目目录
     git remote add upstream https://github.com/mistbow/cms_6bey #添加跟原始资源库关联，名为upstream
-```
     git fetch upstream #从原始库上获取最新更新
+```
 #### 4.修改代码并提交和PUSH
 修改项目中的代码，git add 你修改的文件
 ```ruby
