@@ -12,7 +12,7 @@ gem 'thin'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #gem 'mysql2'
-gem 'pg'
+gem 'postgres-pr'
 
 
 # Gems used only for assets and not required
