@@ -13,21 +13,21 @@
 				<a class="brand" href="#">CMS6BEY</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><%= link_to "Home" %></li>
+						<li><%= link_to "Home", root_path %></li>
 						<li><%= link_to "Link1" %></li>
 						<li><%= link_to "Line2" %></li>
 						<li><%= link_to "Link3" %></li>
 					</ul>
 					<ul class="nav pull-right">
-            <% if current_admin %>
-              Logged in as <%= current_admin.email %>.
-              <%= link_to "Log Out", tession_path("current"), method: "delete" %>
-            <% else %>
-              <%= link_to "Sign admin Up", new_admin_path %>
-              <%= link_to "Log admin In", new_tession_path %>
-            <% end %>
-						<li><%= link_to '注册',new_user_path %></li>
-						<li><%= link_to '登录',new_session_path %></li>
+						<% if current_admin %>
+						<li>Logged in as <%= current_admin.email %>.
+							<li><%= link_to "Log Out", tession_path("current"), method: "delete" %></li>
+							<% else %>
+							<li><%= link_to "Sign admin Up", new_admin_path %></li>
+							<li><%= link_to "Log admin In", new_tession_path %></li>
+							<% end %>
+							<li><%= link_to '注册',new_user_path %></li>
+							<li><%= link_to '登录',new_session_path %></li>
 						<%# 
 						<li class="divider-vertical"></li>
 						<li class="dropdown">
