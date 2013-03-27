@@ -31,7 +31,6 @@ Gemfile.lock
 # YARD artifacts
 .yardoc
 _yardoc
-doc/
 
 # Ignore the database.yml
 /config/database.yml
