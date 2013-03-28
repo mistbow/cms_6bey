@@ -2,13 +2,13 @@ source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
 
-gem 'cloudfoundry-jquery-rails'
-gem 'cloudfoundry-devise', :require => 'devise'
-gem 'json'
-gem 'thin'
+#gem 'cloudfoundry-jquery-rails'
+#gem 'cloudfoundry-devise', :require => 'devise'
+#gem 'json'
+#gem 'thin'
 
-# gem 'execjs'
-# gem 'therubyracer'
+gem 'execjs'
+gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -44,5 +44,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano'
 
 # To use debugger
-gem "haml-rails"
-# gem 'debugger', group: [:development, :test]
+# gem "haml-rails"
+gem 'debugger', group: [:development, :test]
