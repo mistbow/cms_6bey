@@ -1,6 +1,9 @@
 ##找朋友一起学 Rails
 
-原帖开始于(http://ruby-china.org/topics/9358)
+原帖开始于http://ruby-china.org/topics/9358
+演示地址：
+   sinaSAE: http://6bey.scfapp.com/
+   heroku: http://bey6.herokuapp.com/
 
 ##目标
 
