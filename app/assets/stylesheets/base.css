@@ -40,3 +40,38 @@ ul{
 	background-color: #fff;
 }
 
+.pagination{
+	padding-left: 30%;
+}
+
+.pagination a:hover{
+  border: 1px;
+  padding: 8px 8px 8px 8px;
+	color: white;
+	margin-right: 4px;
+	text-decoration: none;
+	line-height: 33px;
+	border-radius: 3px;
+  background-color: #1AA319;
+}
+
+.pagination a{
+  color: #666;
+  padding: 8px 8px 8px 8px;
+	margin-right: 4px;
+	text-decoration: none;
+	line-height: 33px;
+	border-radius: 3px;
+}
+
+.pagination .current{
+  border: 1px;
+  padding: 8px 8px 8px 8px;
+	color: white;
+	margin-right: 4px;
+	text-decoration: none;
+	line-height: 33px;
+	border-radius: 3px;
+  background-color: #1AA319;
+}
+

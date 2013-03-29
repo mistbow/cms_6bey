@@ -2,6 +2,7 @@
 namespace :db do 
 	desc "初始化deals"
 	task :init_deals => :environment do
+		10.times {
 		 Deal.create({ title:"潮人依家春装新款 7折男士长袖 韩版条纹V领拼接长袖男装T恤",
 		 	           price:98.00,
 		 	           real_path:'http://detail.tmall.com/item.htm?id=19587712112&ali_trackid=2:mm_18710838_0_0:1364548552_410_1681477878&spm=2014.12687444.1.0',
@@ -24,6 +25,6 @@ namespace :db do
 		 	           price:91.00,
 		 	           real_path:'http://detail.tmall.com/item.htm?id=19587712112&ali_trackid=2:mm_18710838_0_0:1364548552_410_1681477878&spm=2014.12687444.1.0',
 		 	           image_path:'http://weibotg.com/things/x/5eGdLSxnyc9.jpg'})
-
+		 }
 	end
 end
