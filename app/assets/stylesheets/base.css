@@ -1,0 +1,42 @@
+
+.class-container {
+  padding-bottom: 20px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.deals{
+	position: relative;
+}
+
+
+.deals img{
+ width: 225px;
+ display: block;
+}
+.deal{
+	position: absolute;
+}
+
+
+ul{
+	list-style:none;
+}
+
+.description{
+	background-color: #fff;
+	width: 215px;
+	margin-left: 25px;
+	height: 70px;
+	margin-top: -10px;
+	padding-top: 10px;
+	padding-left:5px;
+	padding-right: 5px; 
+}
+
+.description a:hover {
+	color: #FF9933;
+	text-decoration: none;
+	background-color: #fff;
+}
+
