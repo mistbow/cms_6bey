@@ -1,9 +1,12 @@
 source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
+#FIXME looks like should only belongs to deploy and production
+gem 'cloudfoundry-jquery-rails'
+gem 'cloudfoundry-devise', :require => 'devise'
+gem 'json'
+gem 'thin'
 
-gem 'execjs'
-gem 'therubyracer'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,7 +30,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -40,4 +43,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 gem "haml-rails"
-gem 'debugger', group: [:development, :test]
+
+#FIXME why only development matter
+# gem 'debugger', group: [:development, :test]
+# gem 'execjs'
+# gem 'therubyracer'

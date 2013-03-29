@@ -1,10 +1,29 @@
 ##找朋友一起学 Rails
 
-原帖开始于(http://ruby-china.org/topics/9358)
+原帖开始于http://ruby-china.org/topics/9358
+演示地址：
+   sinaSAE: http://6bey.scfapp.com/
+   heroku: http://bey6.herokuapp.com/
 
 ##目标
 
 本项目将致力于，通过社区协作，共同提高Ruby on Rails开发能力
+
+##How to deploy to Heroku
+
+```ruby
+gem 'pg'
+bundle --without production
+git add .
+git commit -m "changed"
+
+#while up to date
+git branch production
+git checkout production
+#do some code changes
+git commit -am "some desparate code changes to try fix heroku"
+git push heroku production:master
+```
 
 ##新手指南
 
