@@ -48,3 +48,4 @@ gem "haml-rails"
 # gem 'debugger', group: [:development, :test]
 # gem 'execjs'
 # gem 'therubyracer'
+gem 'will_paginate', '~> 3.0'
