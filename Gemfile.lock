@@ -70,6 +70,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.7.2)
+    mysql2 (0.3.11)
     orm_adapter (0.0.7)
     pg (0.15.0)
     polyglot (0.3.3)
@@ -127,6 +128,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -139,9 +141,11 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   json
+  mysql2
   pg
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   thin
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0)
