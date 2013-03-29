@@ -132,7 +132,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (~> 3.0.0)
+  bcrypt-ruby (~> 3.0.1)
   cloudfoundry-devise
   cloudfoundry-jquery-rails
   coffee-rails (~> 3.2.1)
