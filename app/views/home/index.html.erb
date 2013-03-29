@@ -1,0 +1,45 @@
+  <div class="class-container">
+	  <div class="alert alert-warning" style="text-align:left; margin-bottom:10px;">
+			  通知：亲爱的涂格网用户们，根据业务调整，涂格网关闭所有与女性相关商品，专注于《男士品质购物》，给您造成的不便请谅解，并且感谢经常来涂格网翻东西的姑娘们，祝你们越来越美丽！也希望你们同样支持涂格网，分享给身边的男生，谢谢！ —— CMS6BEY                     
+		</div>
+	</div>
+<div class="deals">
+	<%Deal.all.each_with_index do |deal,index|%>
+	<div class="deal" id="deal_<%=index%>">
+			<ul class="pic">
+				<li>
+					<%=link_to image_tag(deal.image_path),deal_path(deal),target:"_blank"%>
+				</li>
+			</ul>
+			<div class="description">
+         <p><span class="price">￥<%=deal.price%></span> 
+         <%=link_to deal.title.first(30), deal_path(deal),target:'_blank'%>	
+         </p>
+			   <p><%=link_to '我要购买',deal_path(deal),target:"_blank"%></p>
+			</div>
+	</div>
+	<%end%>
+	
+</div>
+<script type="text/javascript">
+var margin_left = 10;
+var margin_top = 10;
+var deals=$(".deal");
+var deal_W = deals[0].offsetWidth+margin_left;
+function locate_deals(){
+    var h=[];
+    for(var i = 0;i < deals.length;i++) {
+        deal_h = deals[i].offsetHeight;
+        h[i]=deal_h;
+        $('#deal_'+i).css("left",(i%4) * deal_W);
+        if(i < 4) {
+            $('#deal_'+i).css("top",0);
+        }else{
+        	$('#deal_'+i).css("top",h[i-4]+margin_top);
+        }
+    }
+}
+window.onload = function() {locate_deals();};
+window.onresize = function() {locate_deals();};
+</script>
+
