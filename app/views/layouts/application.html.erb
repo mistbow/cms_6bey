@@ -2,45 +2,61 @@
 <html>
 <head>
 	<title>Cms6bey</title>
-	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= stylesheet_link_tag    "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tags %>
 </head>
+
+<style type="text/css">
+	.brand:hover {
+	color: #FF9933;
+	text-decoration: none;
+	background-color: #eee;
+}
+</style>
 <body>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="#">CMS6BEY</a>
+				<a class="brand" href="/">CMS6BEY</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li><%= link_to "Home", root_path %></li>
-						<li><%= link_to "Link1" %></li>
-						<li><%= link_to "Line2" %></li>
-						<li><%= link_to "Link3" %></li>
+						<li><%= link_to "首页", root_path %></li>
+						<li><%= link_to "所有宝贝" %></li>
+						<li><%= link_to "社区" %></li>
+						<li><%= link_to "关于我们" %></li>
 					</ul>
 					<ul class="nav pull-right">
-						<% if current_admin %>
-						<li>Logged in as <%= current_admin.email %>.
-							<li><%= link_to "Log Out", tession_path("current"), method: "delete" %></li>
-							<% else %>
-							<li><%= link_to "Sign admin Up", new_admin_path %></li>
-							<li><%= link_to "Log admin In", new_tession_path %></li>
-							<% end %>
+						<form action="/search" class="navbar-search pull-left" method="get">
+		          <input type="text" name="q" class="search-query span3" value="" placeholder="搜索" />
+		        </form>
+						<% if current_user %>
+							 <ul class="nav pull-right" id="userbar">
+							  <li>
+							    <a href="/notifications" id="user_notifications_count"><span class="badge ">0</span></a>
+							  </li>
+								 <li class="dropdown" id="user_menu">
+										    <a href="#user_menu" class="dropdown-toggle" data-toggle="dropdown">
+										    	<% if current_user.first_name != nil && current_user.last_name != nil %>
+										    	<%= current_user.first_name + current_user.last_name %>
+										    	<% else %>
+												新用户
+										    	<b class='caret'></b>
+										    	<% end %>
+										    </a>
+										    <ul class="dropdown-menu">
+										    	<li class="first"><a href="/users/<%= current_user.id %>">我的主页</a></li>
+										    	<li><a href="/users/<%= current_user.id %>/edit">个人资料设置</a></li>
+										    	<li class="last">
+										    	<a href="/sessions/<%= current_user.id %>" data-method="delete" rel="nofollow">退出</a>
+										    	</li>
+										   </ul>
+								</li>
+						</ul>
+						<%else%>
 							<li><%= link_to '注册',new_user_path %></li>
 							<li><%= link_to '登录',new_session_path %></li>
-						<%# 
-						<li class="divider-vertical"></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
-						</li> 
-						%>
+						<%end%>
 					</ul>
 				</div>
 			</div>
@@ -48,9 +64,14 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="span8"><%= yield %></div>
-			<div class="span4"></div>
+			<div class="span1"></div>
+			<div class="span10"><%= yield %></div>
+			<div class="span1"></div>
 		</div>
 	</div>
+  <footer>
+  		  <hr>
+        <p class="center">© Copyright 2012-2013 <a href="https://github.com/mistbow/cms_6bey">CMS6BEY</a> Tugewang.com 京ICP备09043688号</p>
+  </footer>
 </body>
 </html>

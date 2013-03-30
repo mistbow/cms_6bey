@@ -1,9 +1,24 @@
 <%= form_for @user, :html => { :class => "form-horizontal" } do |f| %>
 <fieldset>
   <div id="legend">
-    <legend class="">修改密码</legend>
+    <legend class="">用户资料设置</legend>
   </div>
   <div class="control-group">
+    <div class="control-group">
+      <!-- 姓 -->
+      <label class="control-label" for="email">姓</label>
+      <div class="controls">
+        <%= f.text_field :first_name, :class=>"input-xlarge" %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- 名 -->
+      <label class="control-label" for="email">名</label>
+      <div class="controls">
+        <%= f.text_field :last_name, :class=>"input-xlarge" %>
+      </div>
+    </div>
 
     <div class="control-group disabled">
       <!-- 邮箱 -->
@@ -33,10 +48,9 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <%= f.button '注册',:class=>"btn btn-success" %>
+        <%= f.button '保存',:class=>"btn btn-success" %>
       </div>
     </div>     
   </fieldset>
   <% end %>
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= notice %>
