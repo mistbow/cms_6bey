@@ -1,0 +1,23 @@
+<div class="show_box">
+	<div class="show_pic">
+		<%=link_to image_tag(@deal.image_path),@deal.real_path,target:"_blank"%>
+	</div>
+	<div class="show_info">
+		<h3><%=link_to @deal.title, @deal.real_path,target:"_blank"%></h3>
+		<div class="price">￥<%=@deal.price%></div>
+		<div style="width:116px;">
+			<a href="<%=@deal.real_path%>" target="_blank" title="喜欢就买吧">
+				<div class='buyit'></div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class='info_bar'>—— 你可能还喜欢 ——</div>
+<div class="deals">
+<%= render :partial => "list", :locals => { :deals => @like_deals } %>
+</div>
+
+<script type="text/javascript">
+   $('footer').css('top','4000px');
+</script>

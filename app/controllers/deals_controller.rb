@@ -14,7 +14,8 @@ class DealsController < ApplicationController
   # GET /deals/1.json
   def show
     @deal = Deal.find(params[:id])
-
+    @like_deals = Deal.first(20)
+    @footer_top = 700
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @deal }
