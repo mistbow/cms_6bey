@@ -8,7 +8,7 @@
         <!-- 邮箱 -->
         <label class="control-label" for="email">邮箱</label>
         <div class="controls">
-          <%= text_field_tag :email, params[:email], :class=>"input-xlarge", :placeholder=>"" %>
+          <%= text_field_tag :email, params[:email], :class=>"input-xlarge" %>
         </div>
       </div>
 
@@ -16,10 +16,12 @@
         <!-- Password-->
         <label class="control-label" for="password">密码</label>
         <div class="controls">
-          <%= password_field_tag :password, params[:password], :class=>"input-xlarge", :placeholder=>"" %>
+          <%= password_field_tag :password, params[:password], :class=>"input-xlarge" %>
         </div>
       </div>
-
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
       <div class="control-group">
         <!-- Button -->
         <div class="controls">

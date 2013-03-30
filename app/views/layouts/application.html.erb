@@ -36,13 +36,20 @@
 							    <a href="/notifications" id="user_notifications_count"><span class="badge ">0</span></a>
 							  </li>
 								 <li class="dropdown" id="user_menu">
-										    <a href="#user_menu" class="dropdown-toggle" data-toggle="dropdown"><%=current_user.first_name+current_user.last_name%> 
+										    <a href="#user_menu" class="dropdown-toggle" data-toggle="dropdown">
+										    	<% if current_user.first_name != nil && current_user.last_name != nil %>
+										    	<%= current_user.first_name + current_user.last_name %>
+										    	<% else %>
+												新用户
 										    	<b class='caret'></b>
+										    	<% end %>
 										    </a>
 										    <ul class="dropdown-menu">
-										    	<li class="first"><a href="#">我的主页</a></li>
-										    	<li><a href="#">个人资料设置</a></li>
-										    	<li class="last"><a href="#" data-method="delete" rel="nofollow">退出</a></li>
+										    	<li class="first"><a href="/users/<%= current_user.id %>">我的主页</a></li>
+										    	<li><a href="/users/<%= current_user.id %>/edit">个人资料设置</a></li>
+										    	<li class="last">
+										    	<a href="/sessions/<%= current_user.id %>" data-method="delete" rel="nofollow">退出</a>
+										    	</li>
 										   </ul>
 								</li>
 						</ul>
@@ -63,7 +70,8 @@
 		</div>
 	</div>
   <footer>
-     <p>© Copyright 2012-2013 <a href="https://github.com/mistbow/cms_6bey">CMS6BEY</a> Tugewang.com 京ICP备09043688号</p>
+  		  <hr>
+        <p class="center">© Copyright 2012-2013 <a href="https://github.com/mistbow/cms_6bey">CMS6BEY</a> Tugewang.com 京ICP备09043688号</p>
   </footer>
 </body>
 </html>

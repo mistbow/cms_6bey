@@ -1,15 +1,30 @@
 <%= form_for @user, :html => { :class => "form-horizontal" } do |f| %>
 <fieldset>
   <div id="legend">
-    <legend class="">注册</legend>
+    <legend class="">用户资料设置</legend>
   </div>
   <div class="control-group">
+    <div class="control-group">
+      <!-- 姓 -->
+      <label class="control-label" for="email">姓</label>
+      <div class="controls">
+        <%= f.text_field :first_name, :class=>"input-xlarge" %>
+      </div>
+    </div>
 
     <div class="control-group">
+      <!-- 名 -->
+      <label class="control-label" for="email">名</label>
+      <div class="controls">
+        <%= f.text_field :last_name, :class=>"input-xlarge" %>
+      </div>
+    </div>
+
+    <div class="control-group disabled">
       <!-- 邮箱 -->
       <label class="control-label" for="email">邮箱</label>
       <div class="controls">
-        <%= f.text_field :email, :class=>"input-xlarge" %>
+        <span class="input-xlarge uneditable-input"><%= @user.email %></span>
       </div>
     </div>
 
@@ -33,8 +48,9 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <%= f.button '注册',:class=>"btn btn-success" %>
+        <%= f.button '保存',:class=>"btn btn-success" %>
       </div>
     </div>     
   </fieldset>
   <% end %>
+<%= notice %>
