@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329091050) do
+ActiveRecord::Schema.define(:version => 20130330093116) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -65,15 +65,6 @@ ActiveRecord::Schema.define(:version => 20130329091050) do
     t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "deals", :force => true do |t|
-    t.string   "title"
-    t.string   "image_path"
-    t.decimal  "price",      :precision => 8, :scale => 2
-    t.string   "real_path"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
   end
 
   create_table "users", :force => true do |t|
