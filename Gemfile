@@ -12,8 +12,6 @@ gem 'thin'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem "twitter-bootstrap-rails"
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,6 +41,7 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 # gem 'capistrano'
 
 # To use debugger
+
 gem "haml-rails"
 
 #FIXME why only development matter

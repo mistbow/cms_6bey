@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130326013536) do
+ActiveRecord::Schema.define(:version => 20130330091414) do
 
   create_table "admins", :force => true do |t|
     t.string   "email"
@@ -20,13 +20,22 @@ ActiveRecord::Schema.define(:version => 20130326013536) do
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "deals", :force => true do |t|
+    t.string   "title"
+    t.string   "image_path"
+    t.decimal  "price",      :precision => 8, :scale => 2
+    t.string   "real_path"
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+  end
+
   create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest", :limit => 128
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "first_name",      :limit => 25
     t.string   "last_name",       :limit => 50
-    t.string   "email",                         :default => "", :null => false
-    t.string   "password_digest", :limit => 40
-    t.datetime "created_at",                                    :null => false
-    t.datetime "updated_at",                                    :null => false
   end
 
 end
