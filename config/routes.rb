@@ -1,4 +1,8 @@
 Cms6bey::Application.routes.draw do
+  devise_for :admins
+
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   resources :deals ,:only=>[:index,:show]
   resources :admins
   resources :users
