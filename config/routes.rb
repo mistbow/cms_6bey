@@ -1,7 +1,5 @@
 Cms6bey::Application.routes.draw do
-  resources :deals
-
-
+  resources :deals ,:only=>[:index,:show]
   resources :admins
   resources :users
   resources :sessions
