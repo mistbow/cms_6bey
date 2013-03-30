@@ -27,4 +27,31 @@ namespace :db do
 		 	           image_path:'http://weibotg.com/things/x/5eGdLSxnyc9.jpg'})
 		 }
 	end
+
+	desc "初始化商品大类"
+	task :init_categories => :environment do
+		 Category.create({ name:"春装外套"})	
+		 Category.create({ name:"春装内搭"})	
+		 Category.create({ name:"春款男裤"})	
+		 Category.create({ name:"风格"})	 
+	end
+
+	desc "初始化商品大类"
+	task :init_tags => :environment do
+		6.times do |time|
+			Tag.create({ name:"tag#{time}",category_id:1})
+		end 
+
+		6.times do |time|
+			Tag.create({ name:"tag#{1*time+1}",category_id:2})
+		end
+
+		6.times do |time|
+			Tag.create({ name:"tag#{2*time+1}",category_id:3})
+		end
+
+		6.times do |time|
+			Tag.create({ name:"tag#{3*time+1}",category_id:4})
+		end 
+	end
 end
