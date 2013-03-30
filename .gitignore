@@ -28,6 +28,7 @@ test/version_tmp
 tmp
 /Gemfile.lock
 
+
 # YARD artifacts
 .yardoc
 _yardoc
