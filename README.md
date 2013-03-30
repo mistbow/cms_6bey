@@ -8,7 +8,18 @@
 ##目标
 
 本项目将致力于，通过社区协作，共同提高Ruby on Rails开发能力
+###开发本地部署特别注意
+运行bundle
+```ruby
+  bundle --without production
+```
+数据添加
+```ruby
+  rake db:init_categories               # 初始化商品大类
+  rake db:init_deals                    # 初始化deals
+  rake db:init_tags                     # 初始化商品大类
 
+```
 ##How to deploy to Heroku
 
 ```ruby
@@ -64,3 +75,4 @@ git push heroku production:master
 >Our QQ group is 280706929.
 >Wiki will be update after I push my code :)
 >My english will be better someday haha!
+

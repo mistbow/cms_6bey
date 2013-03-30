@@ -1,5 +1,6 @@
 class TessionsController < ApplicationController
   def new
+    @admin = Admin.all
   end
 
   def create

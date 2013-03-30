@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.first_name %>
-  <%= @user.last_name %>
-  <%= @user.password_digest %>
+<table class="table table table-bordered">
+	<thead>	
+	<th><div class="center">用户资料</div></th>
+	</thead>
+	<tr>
+		<td>用户名</td>
+		<td>邮箱</td>
+		<td>密钥</td>
+	</tr>
+<tr>
+		<td><%= @user.first_name + @user.last_name if (@user.first_name != nil && @user.last_name != nil)%></td>
+	  <td><%= @user.email %></td>
+	  <td><%= @user.password_digest %></td>
+</tr>
+</table>
 
-</p>
 
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to '编辑用户资料', edit_user_path(@user) %>
