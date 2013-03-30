@@ -1,0 +1,34 @@
+zh-CN:
+  activerecord:
+     attributes:
+       category:
+         id: '编号'
+         name: '名称'
+         created_at: '创建时间'
+         updated_at: '最后更新时间'
+         tags: '包含类别'
+       tag:
+         id: '编号'
+         name: '名称'
+         category: '所属大类标签'
+         deals: '包含商品'
+         created_at: '创建时间'
+         updated_at: '最后更新时间'
+       deal:
+         id: '编号'
+         image_path: '图片地址'
+         price: '价格'
+         real_path: '商品跳转路径'
+         title: '商品标题'
+         created_at: '创建时间'
+         updated_at: '最后更新时间'
+       user:
+         id: '编号'
+         email: '邮箱'
+         first_name: '姓'
+         last_name: '名'
+         password: '密码'
+         password_confirmation: '确认密码'
+         password_digest: '密码加密'
+         created_at: '创建时间'
+         updated_at: '最后更新时间'
