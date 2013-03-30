@@ -58,5 +58,7 @@ module Cms6bey
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    #zh-CN yml
+    config.i18n.default_locale = "zh-CN"
   end
 end

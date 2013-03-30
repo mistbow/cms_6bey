@@ -1,20 +1,20 @@
 class DealsController < ApplicationController
-  # GET /deals
-  # GET /deals.json
-  def index
-    @deals = Deal.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @deals }
-    end
+  def index
+    unless params[:t]
+       @deals = Deal.order("id desc").paginate(:page => params[:page], :per_page => 24)
+    else
+      @deals = Deal.where("tag_id =? ",params[:t]).order("id desc").paginate(:page => params[:page], :per_page => 24)
+    end 
+    @footer_top = 300
   end
 
   # GET /deals/1
   # GET /deals/1.json
   def show
     @deal = Deal.find(params[:id])
-
+    @like_deals = Deal.first(20)
+    @footer_top = 700
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @deal }

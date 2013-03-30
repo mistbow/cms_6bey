@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  function locate_deals(){
+      var margin_top = 10;
+      var deals=$(".deal");
+      var deal_W = deals[0].offsetWidth-10;
+      var h=[];
+      var top = [0,0,0,0];
+      for(var i = 0;i < deals.length;i++) {
+          deal_h = deals[i].offsetHeight;
+          h[i]=deal_h;
+          $('#deal_'+i).css("left",(i%4) * deal_W);
+          if(i < 4) {
+              $('#deal_'+i).css("top",0);
+          }else{
+            top[i%4] =(h[i-4]+margin_top+top[i%4])
+          	$('#deal_'+i).css("top",top[i%4]);
+          }
+      }
+     max_top = Math.max.apply({},top)+Math.max.apply({},h);
+     $(".pagination").css("top",max_top+20);
+     $("footer").css({
+     	  "top":max_top+<%=top||=200%>,
+     	  "position":"absolute"
+   })
+  }
+window.onload = function() {locate_deals();};
+window.onresize = function() {locate_deals();};
+</script>

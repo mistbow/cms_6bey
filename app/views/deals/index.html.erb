@@ -1,0 +1,23 @@
+<div class="class-container">
+  <div class='deal_category'>
+    <%Category.all.each do |category|%>
+    	<div class='deal_tags'>
+    	 <h3><%=category.name%></h3>	
+    	 <div class='tags'>
+    	 	<%category.tags.each do |tag|%>
+    	 	 <%=link_to tag.name, deals_path(t:tag)%>
+    	 	 <%end%>
+    	 </div>
+    	</div>
+    <%end%>
+  </div>
+</div>
+<div class="deals">
+<%= render :partial => "deals/list", :locals => { :deals => @deals } %>
+<%= will_paginate @deals %>
+</div>
+<style type="text/css">
+.pagination{
+  position: absolute;
+}
+</style>
