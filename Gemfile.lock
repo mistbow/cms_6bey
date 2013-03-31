@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
@@ -85,7 +85,6 @@ GEM
     nested_form (0.3.1)
     nokogiri (1.5.9)
     orm_adapter (0.0.7)
-    pg (0.15.0)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -175,7 +174,6 @@ DEPENDENCIES
   jquery-rails
   json
   mysql2
-  pg
   rails (= 3.2.13)
   rails_admin
   sass-rails (~> 3.2.3)
