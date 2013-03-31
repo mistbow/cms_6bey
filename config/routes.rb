@@ -1,5 +1,7 @@
 Cms6bey::Application.routes.draw do
-  devise_for :admins
+  devise_for :admins do 
+    get '/admin/logout' => "devise/sessions#destroy"
+  end
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
