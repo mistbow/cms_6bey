@@ -26,14 +26,9 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
-<<<<<<< HEAD
-/Gemfile.lock
-
-=======
 Gemfile.lock
 .sass-cache
 public/assets
->>>>>>> upstream/master
 
 # YARD artifacts
 .yardoc
