@@ -11,5 +11,7 @@
 		</div>
   </div>
  <%end%>
-
-<%= render :partial => "common/deal_js", :locals => { :top => @footer_top } %>
+<script type="text/javascript">
+window.onload = function() {locate_deals();};
+window.onresize = function() {locate_deals();};
+</script>
