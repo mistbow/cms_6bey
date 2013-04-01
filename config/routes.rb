@@ -2,6 +2,7 @@ Cms6bey::Application.routes.draw do
   devise_for :admins do 
     get '/admin/logout' => "devise/sessions#destroy"
   end
+  match '/auth/:provider/callback' => 'sessions#create_by_github'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

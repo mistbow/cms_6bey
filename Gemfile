@@ -51,7 +51,7 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 gem "haml-rails"
 
 #FIXME why only development matter
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 # gem 'execjs'
 # gem 'therubyracer'
 gem 'will_paginate'
