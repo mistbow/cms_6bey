@@ -3,7 +3,7 @@ Cms6bey::Application.routes.draw do
     get '/admin/logout' => "devise/sessions#destroy"
   end
   match '/auth/:provider/callback' => 'sessions#create_by_github'
-
+  match 'search' => 'deals#search'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :deals ,:only=>[:index,:show]

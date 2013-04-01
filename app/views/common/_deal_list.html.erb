@@ -1,0 +1,14 @@
+<div class="class-container">
+	<div class="alert alert-warning" style="text-align:left; margin-bottom:10px;">
+			  通知：亲爱的CMS6BEY用户们，本项目将致力于，通过社区协作，共同提高Ruby on Rails开发能力分享给身边的rubyist吧，谢谢！ —— CMS6BEY                     
+	</div>
+</div>
+<div class="deals">
+<%= render :partial => "deals/list", :locals => { :deals => deals } %>
+<%= will_paginate deals %>
+</div>
+<style type="text/css">
+.pagination{
+	position: absolute;
+}
+</style>

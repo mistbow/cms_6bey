@@ -3,38 +3,13 @@
   <div id="legend">
     <legend class="">注册</legend>
   </div>
+
+  <%= render :partial => "form_attr", :locals => { :user => @user,:f=>f } %>
+  
   <div class="control-group">
-
-    <div class="control-group">
-      <!-- 邮箱 -->
-      <label class="control-label" for="email">邮箱</label>
-      <div class="controls">
-        <%= f.text_field :email, :class=>"input-xlarge" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <!-- Password-->
-      <label class="control-label" for="password">密码</label>
-      <div class="controls">
-        <%= f.password_field :password, :class=>"input-xlarge" %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <!-- password_confirmation -->
-      <label class="control-label"  for="password_confirmation">重复密码</label>
-      <div class="controls">
-        <%= f.password_field :password_confirmation, :class=>"input-xlarge" %>
-      </div>
-    </div>
-
-
-    <div class="control-group">
-      <!-- Button -->
-      <div class="controls">
+     <div class="controls">
         <%= f.button '注册',:class=>"btn btn-success" %>
-      </div>
-    </div>     
+    </div>
+  </div>     
   </fieldset>
-  <% end %>
+<% end %>
