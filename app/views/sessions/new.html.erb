@@ -3,6 +3,7 @@
    <fieldset>
       <div id="legend">
         <legend class="">登录</legend>
+        <%= render :partial => "common/flash", :locals => { :flash => flash } %>
       </div>
       <div class="control-group">
         <!-- 邮箱 -->
@@ -19,9 +20,6 @@
           <%= password_field_tag :password, params[:password], :class=>"input-xlarge" %>
         </div>
       </div>
-      <% if flash[:notice] %>
-        <div class="notice"><%= flash[:notice] %></div>
-      <% end %>
       <div class="control-group">
         <!-- Button -->
         <div class="controls">

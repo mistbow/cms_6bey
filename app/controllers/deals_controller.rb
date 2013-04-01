@@ -6,26 +6,23 @@ class DealsController < ApplicationController
     else
       @deals = Deal.where("tag_id =? ",params[:t]).order("id desc").paginate(:page => params[:page], :per_page => 24)
     end 
-    @footer_top = 300
   end
 
-  # GET /deals/1
-  # GET /deals/1.json
   def show
     @deal = Deal.find(params[:id])
     @like_deals = Deal.first(20)
-    @footer_top = 700
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @deal }
     end
   end
 
-  # GET /deals/new
-  # GET /deals/new.json
+  def search 
+    @deals = Deal.where("title like ?",'%'+params[:q]+'%').order("id desc").paginate(:page => params[:page], :per_page => 24)
+  end
+
   def new
     @deal = Deal.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @deal }
