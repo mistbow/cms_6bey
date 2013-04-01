@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
     user.uid = auth['uid']
     user.name = auth['info']['name']
     user.first_name = auth['info']['name']
+    user.last_name = 'Github'
     user.save(validate: false)
     user
   end
