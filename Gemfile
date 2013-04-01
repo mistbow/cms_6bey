@@ -8,6 +8,7 @@ gem 'cloudfoundry-devise', :require => 'devise'
 gem 'json'
 gem 'thin'
 gem 'omniauth'
+gem 'omniauth-github'
 
 
 # Bundle edge Rails instead:
