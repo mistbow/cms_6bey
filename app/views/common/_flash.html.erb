@@ -1,0 +1,11 @@
+<%if flash[:error]%>
+<div class='alert alert-error'>
+  <a class='close' data-dismiss='alert' href='#'>×</a>
+   <%= raw flash[:error]%>
+</div>
+<%elsif flash[:success] %>
+<div class='alert alert-success'>
+  <a class='close' data-dismiss='alert' href='#'>×</a>
+   <%=flash[:success]%>
+</div>
+<%end%>

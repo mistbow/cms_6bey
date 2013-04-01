@@ -5,16 +5,17 @@
 	<th><div class="center">用户资料</div></th>
 	</thead>
 	<tr>
+
+		<td>头像</td>
 		<td>用户名</td>
 		<td>邮箱</td>
 		<td>密钥</td>
 	</tr>
 <tr>
-		<td><%= @user.first_name + @user.last_name if (@user.first_name != nil && @user.last_name != nil)%></td>
+	<td><%= image_tag @user.gravatar_url %></td>
+		<td><%= @user.name%></td>
 	  <td><%= @user.email %></td>
 	  <td><%= @user.password_digest %></td>
 </tr>
 </table>
-
-
 <%= link_to '编辑用户资料', edit_user_path(@user) %>

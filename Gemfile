@@ -55,3 +55,7 @@ gem 'debugger', group: [:development, :test]
 # gem 'execjs'
 # gem 'therubyracer'
 gem 'will_paginate'
+gem 'gravtastic'
+group :development do
+    gem "better_errors"
+end

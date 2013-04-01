@@ -37,12 +37,9 @@
 							  </li>
 								 <li class="dropdown" id="user_menu">
 										    <a href="#user_menu" class="dropdown-toggle" data-toggle="dropdown">
-										    	<% if current_user.first_name != nil && current_user.last_name != nil %>
-										    	<%= current_user.first_name + " " + current_user.last_name %>
-										    	<% else %>
-												新用户
+										    	<%= image_tag current_user.gravatar_url ,:class => "img_preview"%>
+										    	<%= current_user.name%>
 										    	<b class='caret'></b>
-										    	<% end %>
 										    </a>
 										    <ul class="dropdown-menu">
 										    	<li class="first"><a href="/users/<%= current_user.id %>">我的主页</a></li>
