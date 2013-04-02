@@ -49,6 +49,7 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 # To use debugger
 
 gem "haml-rails"
+gem 'rails-timeago'
 
 #FIXME why only development matter
 gem 'debugger', group: [:development, :test]
