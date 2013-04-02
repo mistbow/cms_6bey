@@ -36,7 +36,7 @@ namespace :db do
 		 Category.create({ name:"风格"})	 
 	end
 
-	desc "初始化商品大类"
+	desc "初始化商品tag"
 	task :init_tags => :environment do
 		6.times do |time|
 			Tag.create({ name:"tag#{time}",category_id:1})
@@ -53,5 +53,12 @@ namespace :db do
 		6.times do |time|
 			Tag.create({ name:"tag#{3*time+1}",category_id:4})
 		end 
+	end
+
+	desc "初始化nodes"
+	task :init_nodes => :environment do
+		%w(公告 反馈  活动 其他).each do |name|
+			Node.create({name:name})
+		end
 	end
 end

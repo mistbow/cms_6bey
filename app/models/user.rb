@@ -12,6 +12,9 @@ class User < ActiveRecord::Base
 
   validates :email, :name, :password, :password_confirmation, :presence => true
   validates_uniqueness_of :email, :name
+
+  has_many :topics,  :dependent => :destroy
+  has_many :replies, :dependent => :destroy
   
   def self.create_with_omniauth auth
     user = User.new
