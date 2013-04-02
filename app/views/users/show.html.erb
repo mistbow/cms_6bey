@@ -12,7 +12,7 @@
 		<td>密钥</td>
 	</tr>
 <tr>
-	<td><%= image_tag @user.gravatar_url %></td>
+	<td><a href='http://gravatar.com/emails/'><%= image_tag @user.gravatar_url %></a></td>
 		<td><%= @user.name%></td>
 	  <td><%= @user.email %></td>
 	  <td><%= @user.password_digest %></td>
