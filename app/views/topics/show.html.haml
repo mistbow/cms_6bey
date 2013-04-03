@@ -19,6 +19,13 @@
           .conent=raw reply.content
           =will_paginate @replies
   %h2='发表评论'
-  = render 'reply_form'
+  -if current_user
+    = render 'reply_form'
+  -else
+    .login_reminder
+      %p=raw("发表评论请先 <a href='/sessions/new'>登录</a> 或 <a href='/users/new'>注册</a>")
+
+
+
 
   

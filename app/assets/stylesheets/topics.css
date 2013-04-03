@@ -193,3 +193,25 @@ p.conent{
 	padding-top: 30px;
   padding-left: 130px;
 }
+
+.login_reminder{
+	text-align: center;
+	width: 100%;
+	height: 90px;
+	border: 1px solid #B3B3B3;
+}
+
+.login_reminder p{
+	margin-top: 30px;
+}
+
+.login_reminder p a{
+	text-decoration: none;
+  color: #79B32B;
+  font-size: 16px;
+}
+
+.login_reminder p a:hover{
+	text-decoration:underline;
+  background-color: #EEE;
+}
