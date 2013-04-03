@@ -5,11 +5,13 @@
 	<div class="show_info">
 		<h3><%=link_to @deal.title, @deal.real_path,target:"_blank"%></h3>
 		<div class="price">￥<%=@deal.price%></div>
-		<div style="width:116px;">
+		<div>
 			<a href="<%=@deal.real_path%>" target="_blank" title="喜欢就买吧">
 				<div class='buyit'></div>
 			</a>
+			<div class='buyshare'><%= render :partial=>'common/fenxiang'%></div>
 		</div>
+
 	</div>
 </div>
 
