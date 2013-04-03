@@ -1,0 +1,7 @@
+.topic.main
+  %p#notice= notice  
+  %h1= @topic.title
+  =link_to image_tag(@topic.user.gravatar_url), user_path(@topic.user)
+  =link_to @topic.user.name, user_path(@topic.user)
+  %span=@topic.updated_at.to_s(:db)
+  %p.conent=@topic.content
