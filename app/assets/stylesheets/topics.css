@@ -163,7 +163,7 @@ p.conent{
 	min-height: 50px;
 }
 
-.comments_list li img{
+.comments_list li .comment_avatar{
 	padding: 2px;
 	border: 1px solid #E6E6E6;
 	width: 46px;
