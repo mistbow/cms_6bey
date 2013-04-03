@@ -1,5 +1,6 @@
 # encoding: utf-8
 class UsersController < ApplicationController
+  before_filter :check_current, only: [:edit, :update, :destroy]
   # GET /users
   # GET /users.json
   def index
@@ -79,5 +80,9 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+
+  def check_current
+    redirect_to session[:return_to], notice: 'You are not the owner' unless current_user == User.find(params[:id])
   end
 end
