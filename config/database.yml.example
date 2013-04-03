@@ -1,36 +1,21 @@
-# MySQL.  Versions 4.1 and 5.0 are recommended.
-#
-# Install the MYSQL driver
-#   gem install mysql2
-#
-# Ensure the MySQL gem is defined in your Gemfile
-#   gem 'mysql2'
-#
-# And be sure to use new-style password hashing:
-#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development: &common
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: cms_6bey
+  pool: 5
+  username: root
+  password: password
+  host: 127.0.0.1
 
-# in order to DRY,we can use common config 
-# common config
- common: &common
-   adapter: mysql2
-   encoding: utf8
-   pool: 10
-   username: root
-   password: password
-   host: localhost
-   port: 3306
- 
-# development config
- development:
-   database: cms_6bey
-   <<: *common
- 
-# test config
- test:
-   database: cms_6bey
-   <<: *common
-   
-#production config    
- production:
-   <<: *common
-   database: cms_6bey
+test:
+  <<: *common
+production:
+  <<: *common
+#production:
+  #adapter: postgresql
+  #encoding: unicode
+  #database: test-postgres_production
+  #pool: 5
+  #username: test-postgres
+  #password:
