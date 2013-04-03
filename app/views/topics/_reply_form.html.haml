@@ -1,0 +1,15 @@
+= form_for @reply do |f|
+  - if @reply.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@reply.errors.count, "error")} prohibited this topic from being saved:"
+      %ul
+        - @reply.errors.full_messages.each do |msg|
+          %li= msg
+
+  #comment_form
+    = f.kindeditor :content ,:items=>%w(emoticons image media flash),:height=>30
+    = f.hidden_field :user_id, value:current_user.id
+    = f.hidden_field :topic_id,value:@topic.id
+    .actions
+      = f.submit '保存', class:'btn btn-success', id:'submit'
+

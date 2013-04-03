@@ -50,6 +50,7 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 
 gem "haml-rails"
 gem 'rails-timeago'
+gem 'rails_kindeditor'
 
 #FIXME why only development matter
 gem 'debugger', group: [:development, :test]

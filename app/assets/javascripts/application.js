@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require kindeditor
 //= require twitter/bootstrap
 //= require_tree .
+//= require rails-timeago
+//= require locales/jquery.timeago.zh-CN.js
+

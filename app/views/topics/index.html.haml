@@ -4,21 +4,21 @@
   %table
 
     %tr
-      %th{width:'8%'}  状态
-      %th{width:'8%'} 阅读
+      %th{width:'8%'}  类别
+      %th{width:'8%'} 阅读量
       %th.title 标题
-      %th{width:'10%'} 作者
-      %th{width:'10%'} 更新
-      %th{width:70} 回复
+      %th{width:'8%'} 作者
+      %th{width:'12%'} 创建
+      %th{width:70} 最后回复
 
     - @topics.each do |topic|
       %tr
         %td= topic.node.name
         %td= topic.read_count.to_i
-        %td=link_to topic.title, topic_path(topic)
+        %td= link_to truncate(topic.title, :length => 50, :omission => '...'), topic_path(topic)
         %td= link_to topic.user.name, user_path(topic.user) 
-        %td= format_time topic.updated_at
-        %td= topic.replies.last.nil??  '暂无回复': (link_to topic.replies.last.name, user_path(topic.user))
+        %td= format_time topic.created_at
+        %td= topic.replies.last.nil??  '暂无回复': (link_to topic.replies.last.user.name, user_path(topic.replies.last.user))
   %br
 
 
