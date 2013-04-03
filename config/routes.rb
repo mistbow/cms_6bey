@@ -1,5 +1,6 @@
 Cms6bey::Application.routes.draw do
   resources :topics
+  resources :replies, :only=>[:create] 
   
   devise_for :admins do 
     get '/admin/logout' => "devise/sessions#destroy"

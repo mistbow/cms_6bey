@@ -9,7 +9,7 @@
     = f.select :node_id, Node.all.collect {|n| [ n.name, n.id ] }
     = f.text_field :title
   .field
-    = f.text_area :content
+    = f.kindeditor :content ,:items=>%w(emoticons image media flash)
     = f.hidden_field :user_id, value:current_user.id
   .actions
     = f.submit '保存', class:'btn btn-success', id:'submit'

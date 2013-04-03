@@ -4,4 +4,28 @@
   =link_to image_tag(@topic.user.gravatar_url), user_path(@topic.user)
   =link_to @topic.user.name, user_path(@topic.user)
   %span=@topic.updated_at.to_s(:db)
-  %p.conent=@topic.content
+  .conent=raw @topic.content
+
+.comments
+  %h1="评论列表 [ #{@topic.replies.count} ]"  
+  .comments_list
+    %ul
+      - @replies.each_with_index do |reply,index|
+        %li
+          .comment_avatar=image_tag reply.user.gravatar_url
+          = link_to reply.user.name, user_path(reply.user)
+          %span.created_at=reply.created_at.to_s(:db)
+          %span.floor="#{index+1}  楼"
+          .conent=raw reply.content
+          =will_paginate @replies
+  %h2='发表评论'
+  -if current_user
+    = render 'reply_form'
+  -else
+    .login_reminder
+      %p=raw("发表评论请先 <a href='/sessions/new'>登录</a> 或 <a href='/users/new'>注册</a>")
+
+
+
+
+  

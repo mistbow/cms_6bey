@@ -4,18 +4,18 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @topics }
     end
   end
 
-  # GET /topics/1
-  # GET /topics/1.json
+
   def show
     @topic = Topic.find(params[:id])
-
+    @topic.update_attributes(:read_count=>@topic.read_count.to_i+1)
+    @replies = Reply.where("topic_id =? ",@topic.id).order("id desc").paginate(:page => params[:page], :per_page => 20)
+    @reply = Reply.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @topic }
