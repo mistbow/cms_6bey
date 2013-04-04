@@ -14,7 +14,7 @@ gem 'json'
 gem 'thin'
 gem 'omniauth'
 gem 'omniauth-github'
-
+gem 'annotate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
