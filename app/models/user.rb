@@ -1,4 +1,20 @@
 #encoding : utf-8
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  first_name      :string(25)
+#  last_name       :string(50)
+#  email           :string(255)      default(""), not null
+#  password_digest :string(128)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  provider        :string(255)
+#  uid             :string(255)
+#  name            :string(255)
+#
+
 class User < ActiveRecord::Base
   include Gravtastic
   gravtastic
