@@ -20,6 +20,7 @@ zh-CN:
          price: '价格'
          real_path: '商品跳转路径'
          title: '商品标题'
+         caption: '小编指南'
          created_at: '创建时间'
          updated_at: '最后更新时间'
        user:
