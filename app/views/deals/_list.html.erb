@@ -1,7 +1,7 @@
 	<%deals.each_with_index do |deal,index|%>
 	<div class="deal" id="deal_<%=index%>">
 		<ul class="pic">
-			<li><%=link_to image_tag(deal.image_path),deal_path(deal),target:"_blank"%></li>
+			<li><%=link_to image_tag(deal.image_path), deal_path(deal), {target: "_blank", title: display_caption(deal.caption)}%></li>
 	  </ul>
 		<div class="description">
       <p><span class="price">￥<%=deal.price%></span> 
