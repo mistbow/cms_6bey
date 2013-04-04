@@ -1,6 +1,6 @@
 #encoding : utf-8
 class Deal < ActiveRecord::Base
-  attr_accessible :image_path, :price, :real_path, :title
+  attr_accessible :image_path, :price, :real_path, :title, :caption
   belongs_to :tag
   attr_accessible :tag_id
   rails_admin do
