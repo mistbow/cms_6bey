@@ -1,0 +1,8 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: test-postgres_production
+  pool: 5
+  username: test-postgres
+  password:
+  host: 127.0.0.1
