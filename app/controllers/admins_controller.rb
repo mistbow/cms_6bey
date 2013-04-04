@@ -7,7 +7,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(params[:admin])
     if @admin.save
       session[:admin_id] = @admin.id
-      redirect_to root_url, notice: "Thank you for signing up!"
+      redirect_to rails_admin_path
     else
       render "new"
     end
