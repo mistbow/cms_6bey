@@ -29,11 +29,11 @@ class SessionsController < ApplicationController
 
   def admin
     admin = Admin.where(:email => params[:admin][:email]).first
-    if admin.valid_password?(params[:admin][:password])
+    if admin.try(:valid_password?, params[:admin][:password])
       sign_in(admin)
-      redirect_to "/admin"
+      redirect_to rails_admin_path
     else    
-      redirect_to '/admins/sign_in'
+      redirect_to new_admin_session_path
     end
   end
 end
