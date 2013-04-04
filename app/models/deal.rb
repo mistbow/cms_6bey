@@ -1,3 +1,4 @@
+#encoding : utf-8
 # == Schema Information
 #
 # Table name: deals
@@ -13,7 +14,6 @@
 #  caption    :text
 #
 
-#encoding : utf-8
 class Deal < ActiveRecord::Base
   attr_accessible :image_path, :price, :real_path, :title, :caption
   belongs_to :tag

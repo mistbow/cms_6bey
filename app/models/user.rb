@@ -1,3 +1,4 @@
+#encoding : utf-8
 # == Schema Information
 #
 # Table name: users
@@ -14,7 +15,6 @@
 #  name            :string(255)
 #
 
-#encoding : utf-8
 class User < ActiveRecord::Base
   include Gravtastic
   gravtastic

@@ -1,3 +1,4 @@
+#encoding : utf-8
 # == Schema Information
 #
 # Table name: tags
@@ -9,7 +10,6 @@
 #  updated_at  :datetime         not null
 #
 
-#encoding : utf-8
 class Tag < ActiveRecord::Base
   attr_accessible :name, :category_id
   belongs_to :category
