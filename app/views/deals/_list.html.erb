@@ -9,14 +9,15 @@
       </p>
       <p><%=link_to '我要购买',deal_path(deal),target:"_blank"%>
         <%- if current_user.try(:likes?, deal) -%>
-          <%= unlike_link_for deal  %> <%= deal.like_count%> now
+          <%= unlike_link_for deal  %><font style="color:red;"> <%= deal.like_count%></font> 喜欢
         <%- else -%>
           <%- if current_user.present? %>   
-            <%= like_link_for deal %> <%= deal.like_count%> now
+            <%= like_link_for deal %><font style="color:red;"> <%= deal.like_count%></font> 喜欢
           <%- else%>
-            <%= deal.like_count%> like
+            <font style="color:red;"><%= deal.like_count%></font> 喜欢
           <%- end%>
         <%- end -%>
+        / <span style="color:#1AA319;"><%=deal.visit_number%></span> 浏览
       </p>
 		</div>
   </div>

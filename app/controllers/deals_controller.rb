@@ -11,6 +11,7 @@ class DealsController < ApplicationController
   def show
     @deal = Deal.find(params[:id])
     @like_deals = Deal.first(20)
+    @deal.visit_add_one
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @deal }

@@ -22,4 +22,12 @@ class Deal < ActiveRecord::Base
   rails_admin do
     label_plural '商品管理'
   end
+
+  def visit_number
+  	$redis.get("deal_of_#{id}_visit").to_i
+  end
+
+  def visit_add_one
+  	$redis.set("deal_of_#{id}_visit",visit_number+1)
+  end
 end
