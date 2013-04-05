@@ -16,6 +16,7 @@
 #
 
 class User < ActiveRecord::Base
+  include Likeable::UserMethods
   include Gravtastic
   gravtastic
   
