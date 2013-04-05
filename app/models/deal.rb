@@ -15,6 +15,7 @@
 #
 
 class Deal < ActiveRecord::Base
+  include Likeable
   attr_accessible :image_path, :price, :real_path, :title, :caption
   belongs_to :tag
   attr_accessible :tag_id
