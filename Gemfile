@@ -1,11 +1,6 @@
 #source 'http://ruby.taobao.org'
 source "http://rubygems.org"
 
-if RUBY_VERSION =~ /1.9/
-  Encoding.default_external = Encoding::UTF_8
-  Encoding.default_internal = Encoding::UTF_8
-end
-
 gem 'rails', '3.2.13'
 #FIXME looks like should only belongs to deploy and production
 gem 'cloudfoundry-jquery-rails'
@@ -16,6 +11,8 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'annotate'
 gem 'jquery-ui-rails'
+gem 'likeable'
+gem 'redis'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
