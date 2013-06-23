@@ -1,5 +1,13 @@
 #encoding : utf-8
 namespace :db do 
+	desc "初始化admin"
+	task :init_admin => :environment do
+		Admin.create({email:"admin@admin.com",
+					  password:"123456",
+					  password_confirmation:"123456"
+					})
+	end
+
 	desc "初始化deals"
 	task :init_deals => :environment do
 		10.times {
